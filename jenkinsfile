@@ -21,7 +21,7 @@ pipeline {
         stage('Build'){
             steps {
                 //Changer "username" avec votre username sur DockerHub
-                sh 'docker build -t layeb/reactapp-devops:$BUILD_ID -f build/dockerfile .'
+                sh 'docker build -t layeb/reactapp-devops:$BUILD_ID -f dockerfile .'
             }
         }
         stage('Deliver'){

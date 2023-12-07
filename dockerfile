@@ -1,10 +1,11 @@
-FROM node:lts-alpine
+FROM node:current-alpine3.17
 
-WORKDIR usr/src/app
+WORKDIR /app
 
 COPY package*.json ./
 COPY . ./
 
 RUN npm install
+
 
 CMD ["npm", "start"]
